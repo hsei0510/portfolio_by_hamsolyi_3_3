@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'InkLipquid';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*mobile button area----------------------------*/
 /*모바일 햄버거 버튼내용이 상단에 위치 하지 않을 경우 적용이 되지않는다. 왜?*/
 input[type=checkbox]#gnbcheck { display: none; }
@@ -133,6 +140,30 @@ input[type=checkbox]#gnbcheck { display: none; }
   height: 60px;
   line-height: 60px;
   padding: 0 20px;
+}
+#top-logo a:before {
+  content: '';
+  position: absolute;
+    /* left: 50%; */
+    transform: translateX(0%);
+  width: 120px;
+  height: 3px;
+  top: 12px;
+  /* left: calc( 50% - 20px ); */
+  background: #fff;
+  border-radius: 10px;
+}
+#top-logo a:after {
+  content: '';
+  position: absolute;
+    /* left: 50%; */
+    transform: translateX(-100%);
+  width: 120px;
+  height: 3px;
+  bottom: 10px;
+  /* left: calc( 50% - 20px ); */
+  background: #fff;
+  border-radius: 10px;
 }
 
 /* gnb */
@@ -271,6 +302,8 @@ section#intro article .video_wrap .video {
 
 section#intro > article .video_wrap > .article-box {
   position: absolute;
+  left: 0;
+  right: 0;
   top: 35%;
   margin: 0 20%; /*좌우여백을 px로하면 넓은화면에서는 큰 의미가없어서, 상대적으로 처리하려면 %로 해주면된다*/
 }
@@ -338,8 +371,8 @@ section .row > h2:after {
 
 /* section row column style */
 section .row .column {
-  flex: 33.333333%
-  /* flex: 25%;  */
+  /* flex: 33.333333% */
+  flex: 25%;
   /*플랙스는 기본적으로 옆으로 뻗어나가는 성질이 있음*/
 }
 section .row .column .inner {
@@ -350,7 +383,7 @@ section .row .column .inner {
   border: 1px solid #f1f1f1;
   box-sizing: border-box;
   box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-  border-radius: 5px;
+  border-radius: 26px 26px 0px 0px;
 }
 section .row .column .inner h3 {
   margin-top: 15px;
@@ -386,6 +419,7 @@ section .row .column .inner img {
   width: 100%;
   transition: all 0.5s;
   overflow: hidden;
+  border-radius: 18px;
 }
 section .row .column .inner a:hover img {
   transform: scale(0.9);
@@ -451,7 +485,7 @@ section#skill .row .column ul li {
   box-shadow: 2px 0px 2px rgba(0,0,0,0.5);
   text-shadow: 0px 0px 2px rgba(0,0,0,0.8);
   padding: 0px 20px;
-  width: 14%;
+  width: 15%;
   height: 25px;
   line-height: 25px;
   transition-duration: 1s;
@@ -511,6 +545,66 @@ section#epilogue:before {
   background: rgba(255,255,255,0.92);
   z-index: 9;
 }
+
+
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#epilogue {
+  height: 100%;
+  width: 100%;
+}
+#epilogue .row{
+  background: url('../img/Untitled-1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
+.headline {
+  margin: 20px;
+  font-size: 32px;
+  text-align: center;
+  position: relative;
+}
+
+.headline h3 {
+  /* letter-spacing: -1.5px; */
+  font-weight: 500;
+  color: #333;
+}
+
+.text {
+  /* opacity: 0; */
+}
+
+.cursor {
+  position: absolute;
+  display: block;
+  height: 100%;
+  top: 0;
+  right: 0px;
+  width: 2px;
+  background-color: #333;
+  z-index: 1;
+  animation: flash 0.5s none infinite alternate;
+}
+
+
+
+
+
+
+
+
 
 
 /* footer ---------------------------------------*/
@@ -597,6 +691,10 @@ section#epilogue:before {
   background: #f9d423;
 }
 
+#footer .container .row .column p a img {
+  margin: 0px 10px 0px 0px;
+}
+
 
 
 /*반응형 css 영역--------------------------------*/
@@ -606,6 +704,7 @@ section#epilogue:before {
   section#epilogue .row .column .inner img { width: 30%; }
   #footer .container { width: 100%; }
   #footer .container .row .column { flex: 50%; }
+  .headline { font-size: 28px; }
 }
 
 @media screen and ( max-width: 768px ) {
@@ -616,11 +715,6 @@ section#epilogue:before {
   #mobile-close-btn { display: block; }
   #gnbbtn { display: block; }
   input[type=checkbox]#gnbcheck:checked ~ #gnb { right: 0; }
-  /* input[type=checkbox]#gnbcheck:checked ~ #gnbbtn > span:nth-child(2) { display: none; } */
-  /*실습 : 남은 span 태그를 활용하여 close 버튼을 만드시오.*/
-  /* input[type=checkbox]#gnbcheck:checked ~ #gnbbtn > span { top: 50%; }
-  input[type=checkbox]#gnbcheck:checked ~ #gnbbtn > span:nth-child(1) { transform: translateY(50%) rotate(45deg); }
-  input[type=checkbox]#gnbcheck:checked ~ #gnbbtn > span:nth-child(3) { transform: translateY(50%) rotate(-45deg); } */
   #gnb {
     position: fixed;
     top: 0;
@@ -659,6 +753,8 @@ section#epilogue:before {
   section#intro > article .video_wrap > .article-box p {
     font-size: 16px;
   }
+
+  .headline { font-size: 20px; }
 }
 
 @media screen and ( max-width: 380px ) {
@@ -671,6 +767,8 @@ section#epilogue:before {
   section#intro > article .video_wrap > .article-box p {
     font-size: 14px;
   }
+
+  .headline { font-size: 14px; }
 
 }
 /*----------------------------------------------*/
