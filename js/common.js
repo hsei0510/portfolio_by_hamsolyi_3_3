@@ -67,6 +67,40 @@ $(function(){
   //   }
   // });
 
+  // let windowHeight = $(window).innerHeight();
+  // let count = 0;
+  // let wheelAction = false;
+  // let sectionLeng = $('section').length;
+  // function wheelMove(){
+  //   $('html').animate({scrollTop: count*windowHeight},{
+  //     duration: 1000,
+  //     start: function(){
+  //       wheelAction = true;
+  //     },
+  //     complete: function(){
+  //       wheelAction = false;
+  //     },
+  //   });
+  // };
+  // $(window).on('mousewheel', function(event){
+  //   let eventDelta = event.originalEvent.wheelDeltaY;
+  //   if(eventDelta > 0 && wheelAction == false){
+  //     if(count <= 0){
+  //       count = 0;
+  //     }else {
+  //       count--;
+  //       wheelMove();
+  //     }
+  //   }else if(eventDelta < 0 && wheelAction == false){
+  //     if(count >= sectionLeng-1) {
+  //       count = sectionLeng-1;
+  //     }else{
+  //       count++;
+  //       wheelMove();
+  //     }
+  //   };
+  // });
+
 });
 
 
