@@ -8,7 +8,6 @@
 }
 
 /*mobile button area----------------------------*/
-/*모바일 햄버거 버튼내용이 상단에 위치 하지 않을 경우 적용이 되지않는다. 왜?*/
 input[type=checkbox]#gnbcheck { display: none; }
 #gnbbtn {
   display: none;
@@ -46,13 +45,12 @@ input[type=checkbox]#gnbcheck { display: none; }
   top: 10px;
   right: 10px;
   color: #fff;
-  /* background: red; */
 }
 
 #mobile-close-btn:before, #mobile-close-btn:after {
   content: '';
   position: absolute;
-  top: 16px;  /*50%로 표기해도됨, 상하 가운데 정렬*/
+  top: 16px;
   height: 1.6px;
   width: 32px;
   background: #111;
@@ -114,9 +112,7 @@ input[type=checkbox]#gnbcheck { display: none; }
 }
 .button:hover {
   background: #fff;
-  /* color: #666; */
   color: #e65c00;
-  /* color: #f9d423; */
 }
 
 
@@ -144,24 +140,20 @@ input[type=checkbox]#gnbcheck { display: none; }
 #top-logo a:before {
   content: '';
   position: absolute;
-    /* left: 50%; */
-    transform: translateX(0%);
+  transform: translateX(0%);
   width: 120px;
   height: 3px;
   top: 12px;
-  /* left: calc( 50% - 20px ); */
   background: #fff;
   border-radius: 10px;
 }
 #top-logo a:after {
   content: '';
   position: absolute;
-    /* left: 50%; */
-    transform: translateX(-100%);
+  transform: translateX(-100%);
   width: 120px;
   height: 3px;
   bottom: 10px;
-  /* left: calc( 50% - 20px ); */
   background: #fff;
   border-radius: 10px;
 }
@@ -173,7 +165,7 @@ input[type=checkbox]#gnbcheck { display: none; }
 }
 
 #gnb ul {
-  overflow: hidden; /* li 정렬*/
+  overflow: hidden;
 }
 
 #gnb ul li {
@@ -246,8 +238,8 @@ section .row .column {
 section {
   position: relative;
   display: flex;
-  align-items: center; /*세로방향 y축*/
-  justify-content: center; /*가로방향 x축*/
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
   background: #fff;
   box-sizing: border-box;
@@ -259,11 +251,6 @@ section:nth-child(even) {
 
 /*section #intro---------------------------------*/
 section#intro {
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
-  /* background-position: center; */
-  /* background-image: url('../img/intro/3.jpg');  */
-  /* 주의! background: url('../img/intro/3.jpg'); 할때는 맨 위로 올려서써야 적용됨 */
   background-color: #222;
   position: relative;
 }
@@ -280,14 +267,6 @@ section#intro > article {
 }
 
 section#intro article .video_wrap {
-  /* position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  margin: 0;
-  padding: 0; */
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -305,19 +284,17 @@ section#intro > article .video_wrap > .article-box {
   left: 0;
   right: 0;
   top: 35%;
-  margin: 0 20%; /*좌우여백을 px로하면 넓은화면에서는 큰 의미가없어서, 상대적으로 처리하려면 %로 해주면된다*/
+  margin: 0 20%;
 }
 
 section#intro > article .video_wrap > .article-box h2 {
   font-size: 60px;
   text-shadow: 0px 0px 20px rgba(0,0,0,1);
-  /* padding: 0 20%; */
 }
 
 section#intro > article .video_wrap > .article-box p {
   font-size: 20px;
   text-shadow: 0px 0px 10px rgba(0,0,0,0.9);
-  /* padding: 0 20%; */
   width: 80%;
   margin: 0 auto;
 }
@@ -330,7 +307,7 @@ section .row {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap; /*이걸 안하면 옆으로 쫙뻗어나가고 이걸하면 너비맞춰서 아래로 떨어짐*/
+  flex-wrap: wrap;
   color: #333;
   padding: 120px 0px;
   box-sizing: border-box;
@@ -339,8 +316,7 @@ section .row {
 
 /*section row title style*/
 section .row > h2 {
-  /*부모요소에 디스플레이 플렉스를 할경우 자식요소들이 자동 정렬됨*/
-  position: absolute; /*자기값의 초기속성으로 돌아가는데, 지금 초기속성이 가운데 정렬되어있어서?*/
+  position: absolute;
   top:0;
   right: 0;
   left: 0;
@@ -357,29 +333,20 @@ section .row > h2:before, section .row > h2:after {
   transform: translateX(-50%);
 }
 section .row > h2:before {
-  /* width: 120px; */
-  /* height: 1px; */
-  /* bottom: 1px; */
-  /* left: calc( 50% - 60px ); */
-  /* background: #ddd; */
 }
 section .row > h2:after {
   width: 150px;
   height: 3px;
   bottom: 0px;
-  /* left: calc( 50% - 20px ); */
   background: #333;
   border-radius: 10px;
 }
 
 /* section row column style */
 section .row .column {
-  /* flex: 33.333333% */
   flex: 25%;
-  /*플랙스는 기본적으로 옆으로 뻗어나가는 성질이 있음*/
 }
 section .row .column .inner {
-  /* text-align: center; */
   margin: 15px;
   padding: 20px;
   background: #fff;
@@ -391,23 +358,18 @@ section .row .column .inner {
 section .row .column .inner h3 {
   margin-top: 20px;
 }
-
-}
 section .row .column .inner p {
   font-size: 12px;
 }
 section .row .column .inner button {
   all:unset;
   margin: 0px 5px 0px 0px;
-  /* text-decoration: underline; */
 }
 section .row .column .inner button:first-child {
   padding-left: 0px;
 }
-
 section .row .column .inner button a {
   color: #333;
-  /* font-weight: bold; */
   text-align: left;
 }
 
@@ -428,7 +390,6 @@ section .row .column .inner img {
   opacity: 75%
 }
 section .row .column .inner a:hover img {
-  /* transform: scale(0.9); */
   opacity: 100%;
 }
 section .row .column .inner img.shadow {
@@ -461,8 +422,8 @@ section#project .row .column .inner .gray-7 {
 
 section#skill {
   background-image: url('../img/bg/my_skill_bg_5.jpg');
-  background-size: cover; /*커버는 배경이 전체영역을 덮을수있게, 컨테이너는 이미지를 다보여주는것*/
-  background-attachment: fixed; /*스크롤함에따라 배경이 다 보이는것?*/
+  background-size: cover;
+  background-attachment: fixed;
   background-position: center;
 }
 section#skill .row > h2 {
@@ -483,13 +444,9 @@ section#skill .row .column ul {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-
 }
 section#skill .row .column ul:nth-of-type(1) li {
-  /* margin-top: 50px; */
-  /* margin-bottom: 25px; */
 }
-
 section#skill .row .column ul li {
   margin: 20px 10px;
   object-fit: scale-down;
@@ -519,64 +476,15 @@ section#skill .row .column ul li {
   transition-duration: 1s;
 }
 .progressbar .items .title {
-  /* float: left; */
   font-weight: 700;
 }
 .progressbar .items .percent {
-  /* float: right; */
 }
 .progressbar .items-wrap .items {
   background: linear-gradient(25deg, #ffe259, #ffa751);
 }
-/* .progressbar .items-wrap .items:before {
-  content: '';
-  position: absolute;
-  background-image: url('../img/skill/img01.png');
-  width: 25px;
-  height: 25px;
-  left: 0;
-  margin-left: 30px;
-  background-color: red;
-  z-index: 300;
-} */
-
 /*----------------------------------------------*/
 
-/* section#profile {
-  background-image: url('../img/bg/profile_bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-section#profile .row .column .inner {
-  text-align: center;
-}
-section#profile .row .column .inner #job {
-  color: #999;
-  font-size: 14px;
-}
-section#profile .row .column .inner img {
-  width: 20%;
-  border-radius: 100%;
-  margin-bottom: 10px;
-}
-section#profile .row .column .inner > p {
-  width: 50%;
-  margin: 0 auto;
-  padding: 10px 0px;
-}
-section#profile:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top:0;
-  bottom: 0;
-  background: rgba(255,255,255,0.92);
-  z-index: 9;
-} */
-
-/*----------------------------------------------*/
 
 @keyframes flash {
   0% {
@@ -606,13 +514,11 @@ section#profile:before {
 }
 
 .headline h3 {
-  /* letter-spacing: -1.5px; */
   font-weight: 500;
   color: #333;
 }
 
 .text {
-  /* opacity: 0; */
 }
 
 .cursor {
@@ -630,7 +536,6 @@ section#profile:before {
 
 /* footer ---------------------------------------*/
 #footer {
-  /* background: #000; */
   background: #111;
   color: #fff;
   font-size: 14px;
@@ -665,12 +570,9 @@ section#profile:before {
 }
 
 #footer .container .row .column {
-  /*flex의 flex-basis를 의미함!
-  background-image:url(), background-repeat: norepeat;
-  background: url() noreapeat;*/
-  flex: 25%; /*flex: 첫번째에flex-grow 두번째에flex-shrink 세번째에flex-basis의 속성이 들어감!*/
+  flex: 25%;
   box-sizing: border-box;
-  margin-bottom: 30px; /*브레이크포인트 걸고 밑으로 떨어지면 column사이에 공간이 필요하기때문에 미리 만들어놓음!*/
+  margin-bottom: 30px;
   padding: 0px 10px;
 }
 
@@ -678,9 +580,8 @@ section#profile:before {
   font-size: 34px;
   font-weight: 700;
   letter-spacing: 3px;
-  /* border-left: 4px solid #18d26e; */
   border-left: 4px solid #f9d423;
-  padding: 2px 0px 2px 10px; /*상 우 아래 좌*/
+  padding: 2px 0px 2px 10px;
 }
 
 /* footer 공통 영역 */
@@ -708,7 +609,6 @@ section#profile:before {
 
 #footer .container .row .column h4:after {
   width: 60px;
-  /* background: #18d26e; */
   background: #f9d423;
 }
 
@@ -719,8 +619,7 @@ section#profile:before {
 
 
 /*반응형 css 영역--------------------------------*/
-/* 미디어 쿼리를 제일 상단에 올리면 오류가 난다! 왜냐하면 디바이스의 width가 기존일때는 코드 그대로 적용되어야 하고 디바이스의 크기가 줄어들때 적용될 속성들은 나중에 적용되어야 하므로, 즉 인터프린터언어이기 때문인가?*/
-@media screen and ( max-width: 1200px ) { /* screen 또는 all 로 해도됨*/
+@media screen and ( max-width: 1200px ) {
   section .row .column { flex: 50%; }
   section#profile .row .column .inner img { width: 30%; }
   #footer .container { width: 100%; }
@@ -741,10 +640,7 @@ section#profile:before {
     top: 0;
     bottom: 0;
     right: -100%;
-    /* width: 100%; */
-    /* 모바일 슬라이드박스가 화면 전체를 다 덮을때 width 100%하는편*/
     width: 80%;
-    /* 햄버거버튼이 x자로 바꾸는 코드일때 width 80%하는편*/
     background: rgba(255,255,255,0.9);
     transition: 0.5s ease-in-out;
   }
@@ -762,9 +658,7 @@ section#profile:before {
     color: #111;
   }
   #gnb ul li a:hover {
-    /* color: #18d26e; */
     color: #e65c00;
-    /* color: #f9d423; */
   }
 
   section#intro > article .video_wrap > .article-box h2 {
